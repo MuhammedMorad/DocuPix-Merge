@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="website icon" type="png" href="./static/Images/login.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-light">
     <div class="container my-5">
@@ -140,5 +141,34 @@
         });
     });
     </script>
+        <!--Start Footer-->
+    <div class="container p-3">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        
+            <p class="col-md-4 mb-0 text-body-secondary">
+                &copy; 2025 Developed By Eng. Muhammed Mustafa Morad.
+            </p>
+        
+            <div class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0">
+                <a href="#" class="text-decoration-none">
+                    <img src="{{ url_for('static', filename='Images/logo-RGB.png') }}" alt="Logo" style="width: 100px; height: auto;">
+                </a>
+            </div>
+        
+            <div class="col-md-4 d-flex justify-content-end">
+                <a href="https://www.linkedin.com/in/MuhammedMorad/" class="text-body-secondary fs-4 mx-2" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/MuhammedMorad" class="text-body-secondary fs-4 mx-2" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://wa.me/201276717527?text=Hello,%20I%20would%20like%20to%20contact%20you" class="text-body-secondary fs-4 mx-2" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </footer>
+
+    </div>
+    <!--End Footer-->
 </body>
 </html>

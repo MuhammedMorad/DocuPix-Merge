@@ -8,6 +8,7 @@
     <link rel="icon" href="{% block favicon %}{{ url_for('static', filename='Images/managing.png') }}{% endblock %}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-light">
 
@@ -43,6 +44,11 @@
             <a class="button-nav btn btn-dark me-3" href="{{url_for('process_pdf')}}">
                 <img src="{{ url_for('static', filename='Images/file.png') }}" alt="PDF Merger" style="width: 24px; height: 24px;">
                 PDF Merger
+            </a>
+
+            <a class="button-nav btn btn-dark me-3" href="https://validate-id-generate-id.streamlit.app/">
+                <img src="{{ url_for('static', filename='Images/icon.ico') }}" alt="PDF Merger" style="width: 24px; height: 24px;">
+                Validate ID
             </a>
         </div>
         <div class="d-flex">
@@ -104,6 +110,35 @@
     </div>
 
 {% endblock %}
+    <!--Start Footer-->
+    <div class="container p-3">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        
+            <p class="col-md-4 mb-0 text-body-secondary">
+                &copy; 2025 Developed By Eng. Muhammed Mustafa Morad.
+            </p>
+        
+            <div class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0">
+                <a href="#" class="text-decoration-none">
+                    <img src="{{ url_for('static', filename='Images/logo-RGB.png') }}" alt="Logo" style="width: 100px; height: auto;">
+                </a>
+            </div>
+        
+            <div class="col-md-4 d-flex justify-content-end">
+                <a href="https://www.linkedin.com/in/MuhammedMorad/" class="text-body-secondary fs-4 mx-2" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/MuhammedMorad" class="text-body-secondary fs-4 mx-2" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://wa.me/201276717527?text=Hello,%20I%20would%20like%20to%20contact%20you" class="text-body-secondary fs-4 mx-2" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </footer>
+
+    </div>
+    <!--End Footer-->
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

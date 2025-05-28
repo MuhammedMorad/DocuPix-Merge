@@ -5,7 +5,7 @@ PyPDF2
 pytz
 Jinja2
 APScheduler
-python-magic-bin 
+python-magic
 flask-wtf
 
 
