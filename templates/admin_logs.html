@@ -1,0 +1,30 @@
+{% extends "admin.html" %}
+{% block title %}Logs{% endblock %}
+{% block favicon %}{{ url_for('static', filename='Images/log-file.png') }}{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Activity Logs</h2>
+    
+    <table id="logsTable" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Action</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr>
+                <td>{{ log[0] }}</td>
+                <td>{{ log[1] }}</td>
+                <td>{{ log[2] }}</td>
+                <td>{{ log[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "admin.html" %}
+{% block title %}Operation{% endblock %}
+{% block favicon %}{{ url_for('static', filename='Images/operation.png') }}{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Activity Operation</h2>
+    
+    <table id="logsTable" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User Name</th>
+                <th>Action</th>
+                <th>Description</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for op in operation %}
+            <tr>
+                <td>{{ op.id }}</td>
+                <td>{{ op.username }}</td>
+                <td>{{ op.action }}</td>
+                <td>{{ op.description }}</td>
+                <td>{{ op.timestamp }}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

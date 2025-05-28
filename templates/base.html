@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Image Merger{% endblock %} - DocuPix Merge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{% block favicon %}{{ url_for('static', filename='default.png') }}{% endblock %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url_for('home') }}">DocuPix Merge</a>
+        <div class="d-flex justify-content-center flex-grow-1">
+            <a class="button-nav btn btn-dark me-3" href="{{ url_for('process_pdf') }}">
+                <img src="{{ url_for('static', filename='Images/file.png') }}" alt="PDF Merger" style="width: 24px; height: 24px;">
+                PDF Merger
+            </a>
+
+            {% if current_user.username == 'System' %}
+                <a class="button-nav btn btn-dark me-3" href="{{ url_for('admin_panel') }}">
+                    <img src="{{ url_for('static', filename='Images/information-system.png') }}" alt="Admin Panel" style="width: 24px; height: 24px;">
+                    Admin Panel
+                </a>
+            {% endif %}
+            
+        </div>
+        <div class="d-flex">
+            <h5 class="me-4 text-white" style="margin-top: 10px;">Hello, {{ current_user.name }}</h5>
+            <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="container mt-4">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

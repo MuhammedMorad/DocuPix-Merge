@@ -1,0 +1,198 @@
+/* static/style.css */
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 15px;
+}
+
+#image-preview {
+    min-height: 200px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.image-preview-item {
+    position: relative;
+    margin: 5px;
+    max-width: 150px;
+}
+
+.image-preview-item img {
+    border-radius: 8px;
+    max-height: 150px;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 2px 6px;
+}
+
+.form-control {
+    padding-right: 35px;
+}
+.bi-eye,
+.bi-eye-slash {
+    color: #000000;
+    position: absolute;
+    right: 15px;
+    top: 44%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+.bi-eye:hover,
+.bi-eye-slash:hover {
+    color: #495057;
+}
+
+.button-nav{
+    margin-right: 350px;
+}
+
+.upload-card {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.drop-zone {
+    border: 2px dashed #6c757d;
+    border-radius: 8px;
+    padding: 3rem 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.drop-zone:hover {
+    border-color: #0d6efd;
+    background: #f1f8ff;
+}
+
+.drop-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.separator {
+    margin: 1.5rem 0;
+    color: #6c757d;
+    position: relative;
+    width: 50%;
+    text-align: center;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: #dee2e6;
+}
+
+.separator::before { left: 0 }
+.separator::after { right: 0 }
+.file-input {
+    display: none;
+}
+.custom-button {
+    background: #0d6efd;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.custom-button:hover {
+    background: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+.description-card {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.processed-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.download-btn { 
+    background: #673AB7; 
+}
+.download-btn:hover { 
+    background: #673AB7; 
+    color: #fff;
+    transform: translateY(-1px);
+}
+.merged-result {
+    margin-top: 2rem; 
+}
+
+
+/* Add to your main CSS file */
+.animate__animated { 
+    animation-duration: 1s; 
+}
+
+.shadow-hover {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.shadow-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.stats-counter h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.cta-section {
+    border-radius: 1rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.cta-image {
+    background: url('../images/cta-bg.webp') center/cover;
+    height: 100%;
+    min-height: 300px;
+}

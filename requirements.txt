@@ -1,0 +1,12 @@
+Flask
+Flask-Login
+Werkzeug
+PyPDF2
+pytz
+Jinja2
+APScheduler
+python-magic-bin 
+flask-wtf
+
+
+
